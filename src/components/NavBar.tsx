@@ -1,17 +1,23 @@
 "use client";
-import { useRef } from "react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import x from "../../public/x.svg";
+import bars from "../../public/bars.svg";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 function NavBar() {
+  const [open, setOpen] = useState(false);
+
   const navRef = useRef<HTMLDivElement>(null);
   const navElement = useRef<HTMLUListElement>(null);
 
   useGSAP(() => {
     const tl = gsap.timeline();
+
     tl.from(navRef.current, {
       y: -100,
       duration: 1.5,
@@ -23,6 +29,13 @@ function NavBar() {
       stagger: 0.5,
       ease: "power3.out",
     });
+    if (open) {
+      gsap.from(navRef.current, {
+        x: -200,
+        duration: 2,
+        delay: 1,
+      });
+    }
   });
 
   const handleMouseMove = (e: {
@@ -39,14 +52,30 @@ function NavBar() {
     target.style.setProperty("--mouse-y", `${y}px`);
   };
 
+  const toggleMenu = () => {
+    setOpen(!open);
+  };
+
   return (
-    <div className=" flex justify-start md:justify-center items-center z-50">
-      <nav ref={navRef} className="top-0 fixed">
+    <div className="flex justify-start md:justify-center items-center z-[999]">
+      <nav ref={navRef} className={`top-0 fixed`}>
+        <button
+          onClick={toggleMenu}
+          className="md:hidden h-10 w-10 top-0 m-5 flex justify-center items-center"
+        >
+          {open ? (
+            <Image src={x} alt="Close Menu" className="" />
+          ) : (
+            <Image src={bars} alt="Open Menu" className=" " />
+          )}
+        </button>
         <div>
           <ul
             ref={navElement}
             onMouseMove={handleMouseMove}
-            className="nav flex flex-col md:flex-row justify-center items-start md:justify-center relative max-md:space-y-6 md:space-x-6 max-w-max my-5 px-5 py-3 md:rounded-full border-transparent md:bg-white/10"
+            className={`nav ${
+              open ? "flex" : "hidden"
+            } md:flex flex-col md:flex-row justify-center items-start md:justify-center relative max-md:space-y-6 md:space-x-6 max-w-max my-5 px-5 py-3 md:rounded-full border-transparent md:bg-white/10`}
           >
             <li className="element">
               <Link href={"/"}>Home</Link>

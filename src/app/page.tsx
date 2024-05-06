@@ -5,31 +5,42 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PixiPlugin } from "gsap/all";
+import Button from "@/components/Button";
+import hackerEffect from "@/utils/hackerEffect";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, PixiPlugin);
 
 function Home() {
-  const heroRef = useRef(null);
+  const heroRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    gsap.from(heroRef.current, {
-      // opacity: 0,
-      duration: 1.5,
-      delay: 3,
-      filter: "blur(15px)",
-    });
-  });
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+      tl.from(heroRef.current, {
+        opacity: 0,
+        duration: 1.5,
+        filter: "blur(15px)",
+      });
+    },
+    { scope: heroRef }
+  );
 
   return (
     <div
       ref={heroRef}
       className="flex flex-col justify-center items-center h-screen space-y-6"
     >
-      <h1 className="text-5xl font-black">Kunal Singh!</h1>
-      <p className="text-xl font-bold">A passionate Full Stack Developer</p>
-      <button className="text-xl font-medium border-2 border-white rounded-lg px-5 py-2">
-        Download CV
-      </button>
+      <h1
+        data-value="KUNAL SINGH"
+        onMouseOver={hackerEffect}
+        className="text-3xl  sm:text-5xl font-black"
+      >
+        KUNAL SINGH
+      </h1>
+      <p className="text-md sm:text-xl font-bold">
+        A passionate Full Stack Developer
+      </p>
+      <Button />
     </div>
   );
 }
