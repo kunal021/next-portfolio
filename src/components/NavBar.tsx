@@ -53,18 +53,18 @@ function NavBar() {
             className="nav text-sm sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10"
           >
             <li className="element">
-              <Link href={"/"}>Home</Link>
+              <Link href={"#home"}>Home</Link>
             </li>
             <li className="element">
-              <Link href={"/skills"}>Skills</Link>
-            </li>
-
-            <li className="element">
-              <Link href={"/projects"}>Projects</Link>
+              <Link href={"#skills"}>Skills</Link>
             </li>
 
             <li className="element">
-              <Link href={"/contact"}>Contact Me</Link>
+              <Link href={"#projects"}>Projects</Link>
+            </li>
+
+            <li className="element">
+              <Link href={"#contact"}>Contact Me</Link>
             </li>
           </ul>
         </div>
