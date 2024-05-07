@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  cursor: none;
-}
+@media (min-width: 640px) {
+  body {
+    cursor: none;
+  }
 
-body:hover>#trailer {
-  opacity: 1;
+  body:hover>#trailer {
+    opacity: 1;
+  }
 }
 
 

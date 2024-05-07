@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Button from "@/components/Button";
@@ -30,7 +30,7 @@ function Home() {
             start: "top 125px",
             end: "top top",
             // markers: true,
-            scrub: 2,
+            scrub: 3,
           },
         });
       });
@@ -39,6 +39,16 @@ function Home() {
     },
     { scope: heroRef }
   );
+
+  useEffect(() => {
+    setTimeout(() => {
+      const h1Element = document.querySelector("#hacker");
+      if (h1Element) {
+        hackerEffect({ target: h1Element });
+      }
+    }, 1800);
+    // return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div
@@ -50,6 +60,7 @@ function Home() {
         data-value="KUNAL SINGH"
         onMouseOver={hackerEffect}
         className="ani text-3xl  sm:text-5xl font-black"
+        id="hacker"
       >
         KUNAL SINGH
       </h1>
