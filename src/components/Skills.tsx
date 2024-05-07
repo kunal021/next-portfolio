@@ -17,10 +17,10 @@ function Skills() {
             <img
               src={item.image96}
               alt={item.name}
-              className="h-[26px] w-[26px] sm:h-[48px] sm:w-[48px] md:h-[66px] md:w-[66px] lg:h-[96px] lg:w-[96px]"
+              className="h-[32px] w-[32px] sm:h-[48px] sm:w-[48px] md:h-[66px] md:w-[66px] lg:h-[96px] lg:w-[96px]"
             />
             {/* </div> */}
-            <p className="text-white text-center text-[8px] sm:text-sm md:text-lg font-normal sm:font-medium lg:font-bold w-full">
+            <p className="text-white text-center text-[10px] sm:text-sm md:text-lg font-normal sm:font-medium lg:font-bold w-full">
               {item.name}
             </p>
           </div>
