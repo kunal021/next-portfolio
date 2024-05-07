@@ -27,10 +27,10 @@ function Home() {
           duration: 1,
           scrollTrigger: {
             trigger: ".ani",
-            start: "top 100px",
-            end: "top 25px",
-            markers: true,
-            scrub: 1,
+            start: "top 125px",
+            end: "top top",
+            // markers: true,
+            scrub: 2,
           },
         });
       });
