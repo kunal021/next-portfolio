@@ -28,7 +28,7 @@ function Home() {
   return (
     <div
       ref={heroRef}
-      className="flex flex-col justify-center items-center h-screen space-y-6"
+      className="flex flex-col justify-center items-center h-screen space-y-6 text-white"
     >
       <h1
         data-value="KUNAL SINGH"

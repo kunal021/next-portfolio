@@ -57,7 +57,7 @@ function NavBar() {
   };
 
   return (
-    <div className="flex justify-start md:justify-center items-center z-[999]">
+    <div className="flex justify-start md:justify-center items-center z-[999] text-white">
       <nav ref={navRef} className={`top-0 fixed`}>
         <button
           onClick={toggleMenu}
