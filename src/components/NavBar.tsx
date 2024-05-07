@@ -57,9 +57,9 @@ function NavBar() {
   };
 
   return (
-    <div className="flex justify-start md:justify-center items-center z-[999] text-white">
-      <nav ref={navRef} className={`top-0 fixed`}>
-        <button
+    <div className="flex justify-center items-center z-[999] text-white">
+      <nav ref={navRef} className="bottom-0 sm:top-0 fixed">
+        {/* <button
           onClick={toggleMenu}
           className="md:hidden h-10 w-10 top-0 m-5 flex justify-center items-center"
         >
@@ -68,14 +68,12 @@ function NavBar() {
           ) : (
             <Image src={bars} alt="Open Menu" className=" " />
           )}
-        </button>
+        </button> */}
         <div>
           <ul
             ref={navElement}
             onMouseMove={handleMouseMove}
-            className={`nav ${
-              open ? "flex" : "hidden"
-            } md:flex flex-col md:flex-row justify-center items-start md:justify-center relative max-md:space-y-6 md:space-x-6 max-w-max my-5 px-5 py-3 md:rounded-full border-transparent md:bg-white/10`}
+            className={`nav text-[12px] sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10`}
           >
             <li className="element">
               <Link href={"/"}>Home</Link>
@@ -94,27 +92,25 @@ function NavBar() {
           </ul>
         </div>
         <style jsx>{`
-          @media (min-width: 768px) {
-            .nav::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: radial-gradient(
-                250px circle at var(--mouse-x) var(--mouse-y),
-                rgba(255, 255, 255, 0.1),
-                transparent 40%
-              );
-              opacity: 0;
-              transition: opacity 500ms;
-              border-radius: inherit;
-              z-index: -10;
-            }
-            .nav:hover::before {
-              opacity: 1;
-            }
+          .nav::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+              250px circle at var(--mouse-x) var(--mouse-y),
+              rgba(255, 255, 255, 0.1),
+              transparent 40%
+            );
+            opacity: 0;
+            transition: opacity 500ms;
+            border-radius: inherit;
+            z-index: -10;
+          }
+          .nav:hover::before {
+            opacity: 1;
           }
         `}</style>
       </nav>
