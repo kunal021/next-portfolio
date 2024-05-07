@@ -44,8 +44,8 @@ function NavBar() {
   };
 
   return (
-    <div className="flex justify-center items-center z-[999] text-white">
-      <nav ref={navRef} className="bottom-0 sm:top-0 fixed">
+    <div className="flex justify-center items-center text-white">
+      <nav ref={navRef} className="bottom-0 sm:top-0 fixed z-50 h-fit">
         <div>
           <ul
             ref={navElement}
