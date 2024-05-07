@@ -38,11 +38,6 @@ function MouseTrailer() {
       gsap.to(trailer, {
         scale: 1,
       });
-      if (h1 || p) {
-        gsap.to(trailer, {
-          scale: 4,
-        });
-      }
     };
     window.addEventListener("scroll", onScroll);
 
