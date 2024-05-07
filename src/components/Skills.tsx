@@ -17,9 +17,9 @@ function Skills() {
         duration: 3,
         scrollTrigger: {
           trigger: ".animation",
-          start: "top 50%",
+          start: "top 60%",
           end: "top 75px",
-          markers: true,
+          // markers: true,
           scrub: 3,
         },
       });
@@ -28,9 +28,9 @@ function Skills() {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center" id="skills">
+    <div className="flex flex-col justify-center items-center " id="skills">
       <SkillBackground />
-      <p className="animation opacity-0 text-2xl sm:text-5xl text-white font-black text-center">
+      <p className="animation opacity-0 text-2xl sm:text-5xl text-white font-black text-center backdrop-blur">
         Technologies I work with
       </p>
       <div className="animation opacity-0 z-10 flex flex-wrap justify-center items-center m-10 space-x-4 sm:space-x-10 md:space-x-14 lg:space-x-20">

@@ -34,7 +34,7 @@ function SkillBackground() {
       ref={videoRef}
       loop
       muted
-      className="h-screen w-full absolute object-cover -z-10 bg-cover opacity-30"
+      className="skillbackground h-screen w-full absolute object-cover -z-10 bg-cover opacity-30"
     >
       <source src="/skills/cards-video.webm" type="video/webm" />
     </video>
