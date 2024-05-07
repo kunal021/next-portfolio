@@ -70,7 +70,7 @@ const data: skillTypes[] = [
 
   {
     id: 11,
-    name: "Postgess",
+    name: "Postgres",
     image96:
       "/skills/icons8-postgre-sql-a-free-and-open-source-relational-database-management-system-96.png",
   },
