@@ -1,5 +1,3 @@
-// import "./Button.module.css";
-
 function Button() {
   return (
     <button className="button button--pan text-xl px-5 py-3 rounded-lg border-black border-2 z-10">

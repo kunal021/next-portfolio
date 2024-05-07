@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  cursor: none;
+}
+
+body:hover>#trailer {
+  opacity: 1;
+}
+
+
 * {
   background-color: transparent;
 }

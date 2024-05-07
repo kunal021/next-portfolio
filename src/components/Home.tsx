@@ -48,7 +48,7 @@ function Home() {
     >
       <h1
         data-value="KUNAL SINGH"
-        onMouseEnter={hackerEffect}
+        onMouseOver={hackerEffect}
         className="ani text-3xl  sm:text-5xl font-black"
       >
         KUNAL SINGH

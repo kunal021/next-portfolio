@@ -44,7 +44,7 @@ function NavBar() {
   };
 
   return (
-    <div className="flex justify-center items-center text-white">
+    <div className="flex justify-center items-center">
       <nav ref={navRef} className="bottom-0 sm:top-0 fixed z-50 h-fit">
         <div>
           <ul
@@ -52,18 +52,18 @@ function NavBar() {
             onMouseMove={handleMouseMove}
             className="nav text-sm sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10"
           >
-            <li className="element">
+            <li className="element text-white cursor-pointer">
               <Link href={"#home"}>Home</Link>
             </li>
-            <li className="element">
+            <li className="element text-white cursor-pointer">
               <Link href={"#skills"}>Skills</Link>
             </li>
 
-            <li className="element">
+            <li className="element text-white cursor-pointer">
               <Link href={"#projects"}>Projects</Link>
             </li>
 
-            <li className="element">
+            <li className="element text-white cursor-pointer">
               <Link href={"#contact"}>Contact Me</Link>
             </li>
           </ul>
