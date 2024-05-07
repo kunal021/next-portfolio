@@ -1,21 +1,19 @@
 "use client";
-import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import x from "../../public/x.svg";
-import bars from "../../public/bars.svg";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 function NavBar() {
-  const [open, setOpen] = useState(false);
-
   const navRef = useRef<HTMLDivElement>(null);
   const navElement = useRef<HTMLUListElement>(null);
 
   useGSAP(() => {
+    if (window.innerWidth <= 640) {
+      return;
+    }
     const tl = gsap.timeline();
 
     tl.from(navRef.current, {
@@ -45,28 +43,14 @@ function NavBar() {
     target.style.setProperty("--mouse-y", `${y}px`);
   };
 
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
   return (
     <div className="flex justify-center items-center z-[999] text-white">
       <nav ref={navRef} className="bottom-0 sm:top-0 fixed">
-        {/* <button
-          onClick={toggleMenu}
-          className="md:hidden h-10 w-10 top-0 m-5 flex justify-center items-center"
-        >
-          {open ? (
-            <Image src={x} alt="Close Menu" className="" />
-          ) : (
-            <Image src={bars} alt="Open Menu" className=" " />
-          )}
-        </button> */}
         <div>
           <ul
             ref={navElement}
             onMouseMove={handleMouseMove}
-            className={`nav text-sm sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10`}
+            className="nav text-sm sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10"
           >
             <li className="element">
               <Link href={"/"}>Home</Link>
