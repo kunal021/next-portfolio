@@ -10,7 +10,6 @@ function Button() {
             border: none;
             margin: 0;
             font-family: inherit;
-            font-size: inherit;
             position: relative;
           }
 

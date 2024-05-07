@@ -1,12 +1,39 @@
-import Image from "next/image";
+"use client";
 import SkillBackground from "./SkillBackground";
 import data from "@/data/skillData";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function Skills() {
+  useGSAP(() => {
+    let ctx = gsap.context(() => {
+      // const tl = gsap.timeline();
+
+      gsap.to(".animation", {
+        opacity: 1,
+        duration: 3,
+        scrollTrigger: {
+          trigger: ".animation",
+          start: "top 50%",
+          end: "top 75px",
+          markers: true,
+          scrub: 3,
+        },
+      });
+    });
+    return () => ctx.revert();
+  });
+
   return (
-    <div className="flex justify-center items-center" id="skills">
+    <div className="flex flex-col justify-center items-center" id="skills">
       <SkillBackground />
-      <div className="z-10 flex flex-wrap justify-center items-center m-10 space-x-4 sm:space-x-10 md:space-x-14 lg:space-x-20">
+      <p className="animation opacity-0 text-2xl sm:text-5xl text-white font-black text-center">
+        Technologies I work with
+      </p>
+      <div className="animation opacity-0 z-10 flex flex-wrap justify-center items-center m-10 space-x-4 sm:space-x-10 md:space-x-14 lg:space-x-20">
         {data.map((item) => (
           <div
             key={item.id}

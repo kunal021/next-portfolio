@@ -59,12 +59,12 @@ function Home() {
       <h1
         data-value="KUNAL SINGH"
         onMouseOver={hackerEffect}
-        className="ani text-3xl  sm:text-5xl font-black"
+        className="ani text-[40px] leading-8  sm:text-7xl font-black"
         id="hacker"
       >
         KUNAL SINGH
       </h1>
-      <p className="ani text-md sm:text-xl font-bold">
+      <p className="ani text-xl sm:text-3xl font-bold">
         A passionate Full Stack Developer
       </p>
       <div className="ani">

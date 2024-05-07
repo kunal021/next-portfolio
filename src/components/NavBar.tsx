@@ -50,7 +50,7 @@ function NavBar() {
           <ul
             ref={navElement}
             onMouseMove={handleMouseMove}
-            className="nav text-sm sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10"
+            className="nav text-sm sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-3 sm:px-5 py-3 rounded-full border-transparent bg-white/10 backdrop-blur-sm"
           >
             <li className="element text-white cursor-pointer">
               <Link href={"#home"}>Home</Link>
