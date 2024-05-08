@@ -38,7 +38,7 @@ function SkillCards() {
         {data.map((item) => (
           <div
             key={item.id}
-            className="animation opacity-0 scale-0 flex flex-col justify-center items-center border-2 border-white rounded-md  py-4 px-6 sm:py-6 sm:px-10 md:py-10 md:px-14"
+            className="animation opacity-0 scale-0 flex flex-col justify-center items-center border-2 border-gray-500 rounded-md  py-4 px-6 sm:py-6 sm:px-10 md:py-10 md:px-14 bg-black/30"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
