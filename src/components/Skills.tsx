@@ -14,10 +14,11 @@ function Skills() {
 
       gsap.to(".animation", {
         opacity: 1,
+        scale: 0.6,
         duration: 3,
         scrollTrigger: {
           trigger: ".animation",
-          start: "top 60%",
+          start: "top 70%",
           end: "top 75px",
           // markers: true,
           scrub: 3,
@@ -30,24 +31,22 @@ function Skills() {
   return (
     <div className="flex flex-col justify-center items-center " id="skills">
       <SkillBackground />
-      <p className="animation opacity-0 text-2xl sm:text-5xl text-white font-black text-center backdrop-blur">
+      <p className="animation opacity-0 text-4xl sm:text-7xl text-white font-black text-center backdrop-blur scale-50">
         Technologies I work with
       </p>
-      <div className="animation opacity-0 z-10 flex flex-wrap justify-center items-center m-10 space-x-4 sm:space-x-10 md:space-x-14 lg:space-x-20">
+      <div className="z-10 flex flex-wrap justify-center items-center my-10 space-x-2">
         {data.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col justify-center items-center my-8"
+            className="animation opacity-0 scale-0 flex flex-col justify-center items-center border-2 border-white rounded-md  py-6 px-10 lg:py-10 lg:px-14"
           >
-            {/* <div className="relative w-full h-full"> */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={item.image96}
               alt={item.name}
-              className="h-[36px] w-[36px] sm:h-[48px] sm:w-[48px] md:h-[66px] md:w-[66px] lg:h-[96px] lg:w-[96px]"
+              className="h-[48px] w-[48px] md:h-[66px] md:w-[66px] lg:h-[96px] lg:w-[96px]"
             />
-            {/* </div> */}
-            <p className="text-white text-center text-[10px] sm:text-sm md:text-lg font-normal sm:font-medium lg:font-bold w-full">
+            <p className="text-white text-center text-[10px] text-sm md:text-lg font-normal sm:font-medium lg:font-bold w-full">
               {item.name}
             </p>
           </div>
