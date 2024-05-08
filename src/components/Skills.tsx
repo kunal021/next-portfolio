@@ -16,6 +16,8 @@ function Skills() {
         opacity: 1,
         scale: 0.6,
         duration: 3,
+        stagger: 0.3,
+        ease: "back.inOut",
         scrollTrigger: {
           trigger: ".animation",
           start: "top 70%",
