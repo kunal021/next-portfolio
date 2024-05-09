@@ -138,7 +138,7 @@ function ProjectCard() {
                 alt={data.name}
                 className={`rounded-md ${
                   isHovered === data.id ? "opacity-100" : "opacity-30"
-                } hover:scale-110 scale-100 transition-all duration-500 ease-in-out`}
+                } hover:scale-125 scale-100 transition-all duration-500 ease-in-out`}
               ></img>
             </div>
           </div>
