@@ -10,8 +10,8 @@ function MouseTrailer() {
     const h1 = document.querySelectorAll("h1");
     const p = document.querySelectorAll("p");
     const button = document.querySelectorAll("button");
-    const img = document.querySelectorAll("img");
-    console.log(img);
+    // const img = document.querySelectorAll("img");
+    // console.log(img);
 
     let x = 0;
     let y = 0;
@@ -56,10 +56,10 @@ function MouseTrailer() {
       button.addEventListener("mouseenter", onMouseEnter);
       button.addEventListener("mouseleave", onMouseLeave);
     });
-    img.forEach((img) => {
-      img.addEventListener("mouseenter", onMouseEnter);
-      img.addEventListener("mouseleave", onMouseLeave);
-    });
+    // img.forEach((img) => {
+    //   img.addEventListener("mouseenter", onMouseEnter);
+    //   img.addEventListener("mouseleave", onMouseLeave);
+    // });
 
     return () => {
       document.removeEventListener("mousemove", onMouseMove);

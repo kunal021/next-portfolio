@@ -9,17 +9,32 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function SkillCards() {
   useGSAP(() => {
     let ctx = gsap.context(() => {
-      // const tl = gsap.timeline();
+      const tl = gsap.timeline();
 
-      gsap.to(".animation", {
+      tl.to(".animateSkillP", {
+        opacity: 1,
+        scale: 1,
+        duration: 2,
+        stagger: 0.5,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: ".animateSkillP",
+          start: "top 80%",
+          end: "top 30%",
+          // markers: true,
+          scrub: 3,
+        },
+      });
+
+      tl.to(".animationSkill", {
         opacity: 1,
         scale: 0.6,
         duration: 3,
         stagger: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
-          trigger: ".animation",
-          start: "top 70%",
+          trigger: ".animationSkill",
+          start: "top 50%",
           end: "top 75px",
           // markers: true,
           scrub: 3,
@@ -31,14 +46,14 @@ function SkillCards() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <p className="animation opacity-0 text-5xl sm:text-7xl text-white font-black text-center backdrop-blur scale-50">
-        Technologies I work with
+      <p className="animateSkillP opacity-0 text-3xl sm:text-5xl text-white font-extrabold text-center backdrop-blur scale-50">
+        TECHNOLOGIES I WORK WITH
       </p>
       <div className="z-10 flex flex-wrap justify-center items-center my-10">
         {data.map((item) => (
           <div
             key={item.id}
-            className="animation opacity-0 scale-0 flex flex-col justify-center items-center border-2 border-gray-500 rounded-md  py-4 px-6 sm:py-6 sm:px-10 md:py-10 md:px-14 bg-black/30"
+            className="animationSkill opacity-0 scale-0 flex flex-col justify-center items-center border-2 border-gray-500 rounded-md  py-4 px-6 sm:py-6 sm:px-10 md:py-10 md:px-14 bg-black/30"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
