@@ -70,7 +70,7 @@ function ProjectCard() {
   });
   return (
     <div className="flex flex-col justify-center items-center overflow-hidden">
-      <p className="animateProjectP opacity-0 scale-50 text-white text-3xl sm:text-5xl font-extrabold">
+      <p className="animateProjectP opacity-0 scale-50 text-white mx-10 text-3xl sm:text-5xl font-extrabold">
         SOME OF MY WORKS
       </p>
       <div className="flex flex-col justify-center items-start mx-10 my-20 md:m-20">

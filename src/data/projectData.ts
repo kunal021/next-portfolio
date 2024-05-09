@@ -94,7 +94,7 @@ const projectData: projectType[] = [
     githubLink: "https://github.com/kunal021/music-academy",
     liveLink: "https://music-academy-rho.vercel.app/",
     image: "/projects/music.png",
-    technology: ["NextJs", "TypeScript", "Tailwind CSS", "Acetinity UI"],
+    technology: ["NextJs", "TypeScript", "Tailwind CSS", "Aceternity UI"],
     featured: true,
   },
 ];

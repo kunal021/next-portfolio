@@ -46,7 +46,7 @@ function SkillCards() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <p className="animateSkillP opacity-0 text-3xl sm:text-5xl text-white font-extrabold text-center backdrop-blur scale-50">
+      <p className="animateSkillP opacity-0 text-3xl sm:text-5xl mx-10 text-white font-extrabold text-center backdrop-blur scale-50">
         TECHNOLOGIES I WORK WITH
       </p>
       <div className="z-10 flex flex-wrap justify-center items-center my-10">
