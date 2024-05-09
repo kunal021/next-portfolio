@@ -73,21 +73,21 @@ function ProjectCard() {
       <p className="animateProjectP opacity-0 scale-50 text-white text-3xl sm:text-5xl font-extrabold">
         SOME OF MY WORKS
       </p>
-      <div className="flex flex-col justify-center items-start m-20 w-fit">
+      <div className="flex flex-col justify-center items-start mx-10 my-20 md:m-20">
         {projectData.map((data) => (
           <div
             key={data.id}
             id={`project-${data.id}`}
-            className="animationProject flex flex-col md:flex-row items-center justify-center opacity-100 scale-100 text-white md:w-[70vw] my-4 border-2 rounded-xl border-transparent bg-gray-600/40"
+            className="animationProject flex flex-col md:flex-row items-center justify-center opacity-100 scale-100 text-white w-[90] md:w-[70vw] my-4 border-2 rounded-xl border-transparent bg-gray-600/40"
             onMouseEnter={() => handleHover(data.id)}
             onMouseLeave={handleMouseLeave}
           >
             <div className="w-fit md:w-[40vw] p-5">
               <div className="flex justify-start items-center space-x-10">
-                <p className="text-white/30 text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-black py-4 w-fit">
+                <p className="text-white/30 text-5xl md:text-7xl lg:text-9xl font-black py-4 w-fit">
                   #{data.id + 1}
                 </p>
-                <div className="flex justify-center items-center scale-50 md:scale-75 lg:scale-100 space-x-10 p-2 border-2 rounded-md bg-white/10 border-transparent text-black">
+                <div className="flex justify-center items-center scale-75 lg:scale-100 space-x-10 p-2 border-2 rounded-md bg-white/10 border-transparent text-black">
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
@@ -120,10 +120,10 @@ function ProjectCard() {
                   </TooltipProvider>
                 </div>
               </div>
-              <p className="text-white/60 text-sm sm:text-lg md:text-2xl lg:text-3xl font-bold py-2 w-fit">
+              <p className="text-white/60 text-lg md:text-2xl lg:text-3xl font-bold py-2 w-fit">
                 {data.name.toUpperCase()}
               </p>
-              <p className="text-white/60 text-[10px] sm:text-sm md:text-lg lg:text-xl font-bold py-2 w-fit">
+              <p className="text-white/60 text-sm md:text-lg lg:text-xl font-bold py-2 w-fit">
                 {data.description.toUpperCase()}
               </p>
             </div>
