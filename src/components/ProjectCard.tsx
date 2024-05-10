@@ -69,7 +69,7 @@ function ProjectCard() {
     return () => ctx.revert();
   });
   return (
-    <div className="flex flex-col justify-center items-center overflow-hidden">
+    <div className="flex flex-col justify-center items-center w-full overflow-hidden">
       <p className="animateProjectP opacity-0 scale-50 text-white mx-10 text-center text-3xl sm:text-5xl font-extrabold">
         SOME OF MY WORKS
       </p>
@@ -78,7 +78,7 @@ function ProjectCard() {
           <div
             key={data.id}
             id={`project-${data.id}`}
-            className="animationProject flex flex-col md:flex-row items-center justify-center opacity-100 scale-100 text-white w-[90] md:w-[70vw] my-4 border-2 rounded-[26px] border-transparent bg-gray-600/40"
+            className="animationProject flex flex-col md:flex-row items-center justify-center opacity-100 scale-100 text-white w-[90] md:w-[70vw] my-10 border-2 rounded-[26px] border-transparent bg-gray-600/40"
             onMouseEnter={() => handleHover(data.id)}
             onMouseLeave={handleMouseLeave}
           >
