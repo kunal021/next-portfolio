@@ -58,11 +58,12 @@ function AboutMe() {
         <p className="text-start font-medium">
           I&apos;m a college student majoring in Computer Engineering from
           India. I&apos; passionate about tech and Software Developement. I
-          mainly work with technologies like JavaScript, ReactJs, NodeJs,
-          ExpressJs, MongoDB and sometimes in my spare casually explores some
-          intresting UI libraries like Shadcn, Aceternity UI. Currently I&apos;m
-          learning Postgres database with Prisma ORM and basics of AWS. My
-          skillset is not limited to this I&apos;m eager to learn more.
+          mainly work with technologies like JavaScript, ReactJs, Tailwind CSS,
+          NodeJs, ExpressJs, MongoDB and sometimes in my spare casually explores
+          some intresting UI libraries like Shadcn, Aceternity UI. Currently
+          I&apos;m learning NextJs and Postgres database with Prisma ORM and
+          basics of AWS. My skillset is not limited to this I&apos;m eager to
+          learn more and constantly upskilling myself.
         </p>
       </div>
     </div>
