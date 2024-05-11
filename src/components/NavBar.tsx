@@ -30,35 +30,38 @@ function NavBar() {
   });
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline();
 
-    if (open) {
-      tl.from(navRefSm.current, {
-        y: -300,
-        duration: 1,
-        ease: "back.inOut",
-      });
+      if (open) {
+        tl.from(navRefSm.current, {
+          y: -300,
+          duration: 1,
+          ease: "back.inOut",
+        });
 
-      tl.from(".elementsm", {
-        opacity: 0,
-        duration: 1,
-        stagger: 0.5,
-        ease: "power3.out",
-      });
-    } else {
-      tl.to(".elementsm", {
-        opacity: 0,
-        duration: 1,
-        stagger: 0.5,
-        ease: "power3.out",
-      });
-      tl.to(navRefSm.current, {
-        y: -300,
-        // opacity: 0,
-        duration: 2,
-        ease: "back.inOut",
-      });
-    }
+        tl.from(".elementsm", {
+          opacity: 0,
+          duration: 1,
+          stagger: 0.5,
+          ease: "power3.out",
+        });
+      } else {
+        tl.to(".elementsm", {
+          opacity: 0,
+          duration: 1,
+          stagger: 0.5,
+          ease: "power3.out",
+        });
+        tl.to(navRefSm.current, {
+          y: -300,
+          // opacity: 0,
+          duration: 2,
+          ease: "back.inOut",
+        });
+      }
+    });
+    return () => ctx.revert();
   }, [open]);
 
   const handleMouseMove = (e: {
