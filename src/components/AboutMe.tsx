@@ -26,16 +26,16 @@ function AboutMe() {
       });
 
       tl.from(".skillDIV", {
-        opacity: 0.5,
-        scale: 0.7,
-        duration: 1.5,
+        opacity: 0,
+        scale: 0,
+        duration: 2,
         // stagger: 0.5,
         ease: "power.inOut",
         scrollTrigger: {
           trigger: ".skillDIV",
-          start: "top 90%",
+          start: "top 80%",
           end: "top 30%",
-          scrub: 1,
+          scrub: 3,
           //   markers: true,
         },
       });
@@ -50,12 +50,12 @@ function AboutMe() {
       <p className="animateProjectA opacity-0 scale-50 flex justify-center items-center text-5xl font-black text-white">
         About Me
       </p>
-      <div className="skillDIV space-y-10 opacity-100 scale-100 text-white/50 hover:text-white/75 transition-all duration-500 text-xl leading-10 p-10 mx-28 ">
-        <p className="text-start font-semibold">
+      <div className=" space-y-10 text-white/50 hover:text-white/75 transition-all duration-500 text-xl leading-10 p-10 mx-28 ">
+        <p className="skillDIV scale-100 opacity-100 text-start font-semibold">
           Hello everyone, Kunal here. Pleasure metting you all. Please have a
           look around.
         </p>
-        <p className="text-start font-medium">
+        <p className="skillDIV scale-100 opacity-100 text-start font-medium">
           I&apos;m a college student majoring in Computer Engineering from
           India. I&apos; passionate about tech and Software Developement. I
           mainly work with technologies like JavaScript, ReactJs, Tailwind CSS,

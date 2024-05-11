@@ -7,7 +7,7 @@ function page() {
   return (
     <div>
       <Home />
-      <AboutMe />
+      {/* <AboutMe /> */}
       <Projects />
       <Skills />
     </div>

@@ -6,6 +6,8 @@ import { useGSAP } from "@gsap/react";
 import Button from "@/components/Button";
 import hackerEffect from "@/utils/hackerEffect";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Skills from "./Skills";
+import Socials from "./Socials";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -69,6 +71,9 @@ function Home() {
       </p>
       <div className="ani">
         <Button />
+      </div>
+      <div className="ani scale-75 mt-5">
+        <Socials />
       </div>
     </div>
   );
