@@ -72,9 +72,9 @@ function Home() {
       <div className="ani">
         <Button />
       </div>
-      <div className="ani scale-75 mt-5">
+      {/* <div className="ani scale-75 mt-5">
         <Socials />
-      </div>
+      </div> */}
     </div>
   );
 }

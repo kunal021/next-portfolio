@@ -92,9 +92,9 @@ function NavBar() {
                 <Link href={"#home"}>Home</Link>
               </li>
 
-              <li className="element text-white cursor-pointer ">
+              {/* <li className="element text-white cursor-pointer ">
                 <Link href={"#about"}>About Me</Link>
-              </li>
+              </li> */}
 
               <li className="element text-white cursor-pointer">
                 <Link href={"#projects"}>Projects</Link>
@@ -179,9 +179,9 @@ function NavBar() {
               <Link href={"#home"}>Home</Link>
             </li>
 
-            <li className="elementsm text-white cursor-pointer ">
+            {/* <li className="elementsm text-white cursor-pointer ">
               <Link href={"#about"}>About Me</Link>
-            </li>
+            </li> */}
 
             <li className="elementsm text-white cursor-pointer">
               <Link href={"#projects"}>Projects</Link>
