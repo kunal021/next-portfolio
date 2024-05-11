@@ -1,10 +1,8 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useGSAP } from "@gsap/react";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
 function NavBar() {
@@ -15,39 +13,53 @@ function NavBar() {
 
   const [open, setOpen] = useState(false);
 
-  useGSAP(
-    () => {
-      const tl = gsap.timeline();
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-      tl.from(navRef.current, {
-        y: -100,
-        duration: 1.5,
+    tl.from(navRef.current, {
+      y: -100,
+      duration: 1.5,
+      ease: "back.inOut",
+    });
+    tl.from(".element", {
+      opacity: 0,
+      duration: 1.5,
+      stagger: 0.5,
+      ease: "power3.out",
+    });
+  });
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    if (open) {
+      tl.from(navRefSm.current, {
+        y: -300,
+        duration: 1,
         ease: "back.inOut",
       });
-      tl.from(".element", {
+
+      tl.from(".elementsm", {
         opacity: 0,
-        duration: 1.5,
+        duration: 1,
         stagger: 0.5,
         ease: "power3.out",
       });
-      if (open) {
-        tl.from(".element", {
-          opacity: 0,
-          duration: 1.5,
-          stagger: 0.5,
-          ease: "power3.out",
-        });
-        tl.from(navRefSm.current, {
-          opacity: 1,
-          x: -100,
-          duration: 2,
-          delay: 1,
-          ease: "power1.inOut",
-        });
-      }
-    },
-    { scope: container }
-  );
+    } else {
+      tl.to(".elementsm", {
+        opacity: 0,
+        duration: 1,
+        stagger: 0.5,
+        ease: "power3.out",
+      });
+      tl.to(navRefSm.current, {
+        y: -300,
+        // opacity: 0,
+        duration: 2,
+        ease: "back.inOut",
+      });
+    }
+  }, [open]);
 
   const handleMouseMove = (e: {
     clientX?: any;
@@ -64,24 +76,29 @@ function NavBar() {
   };
 
   return (
-    <div ref={container}>
+    <div>
       <div className="hidden md:flex justify-center items-center">
         <nav ref={navRef} className="bottom-0 sm:top-0 fixed z-50 h-fit">
           <div>
             <ul
               ref={navElement}
               onMouseMove={handleMouseMove}
-              className="nav text-base sm:text-base font-medium flex flex-row justify-center items-start relative space-x-6 max-w-max my-5 px-4 sm:px-5 py-2 rounded-full border-transparent bg-white/10 backdrop-blur-sm"
+              className="nav text-md font-medium flex flex-row justify-center items-start relative space-x-6 my-5 px-5 py-3 rounded-full border-transparent bg-white/10 backdrop-blur-sm"
             >
               <li className="element text-white cursor-pointer ">
                 <Link href={"#home"}>Home</Link>
               </li>
-              <li className="element text-white cursor-pointer">
-                <Link href={"#skills"}>Skills</Link>
+
+              <li className="element text-white cursor-pointer ">
+                <Link href={"#about"}>About Me</Link>
               </li>
 
               <li className="element text-white cursor-pointer">
                 <Link href={"#projects"}>Projects</Link>
+              </li>
+
+              <li className="element text-white cursor-pointer">
+                <Link href={"#skills"}>Skills</Link>
               </li>
 
               <li className="element text-white cursor-pointer">
@@ -115,6 +132,7 @@ function NavBar() {
       </div>
       <div
         onClick={() => setOpen((prev) => !prev)}
+        ref={container}
         className="flex cursor-pointer md:hidden fixed top-5 right-5 z-[100]"
       >
         {open ? (
@@ -147,23 +165,27 @@ function NavBar() {
           </svg>
         )}
       </div>
+
       {open && (
-        <div className="flex flex-col fixed w-full backdrop-blur z-50">
-          <ul
-            // ref={navElement}
-            ref={navRefSm}
-            // onMouseMove={handleMouseMove}
-            className="text-base font-medium flex flex-col justify-start items-start relative p-10 space-y-6 bg-white/20"
-          >
+        <div
+          ref={navRefSm}
+          className="flex flex-col fixed w-full backdrop-blur z-50"
+        >
+          <ul className="text-base font-medium flex flex-col justify-start items-start relative p-10 space-y-6 bg-white/20">
             <li className="elementsm text-white cursor-pointer ">
               <Link href={"#home"}>Home</Link>
             </li>
-            <li className="elementsm text-white cursor-pointer">
-              <Link href={"#skills"}>Skills</Link>
+
+            <li className="elementsm text-white cursor-pointer ">
+              <Link href={"#about"}>About Me</Link>
             </li>
 
             <li className="elementsm text-white cursor-pointer">
               <Link href={"#projects"}>Projects</Link>
+            </li>
+
+            <li className="elementsm text-white cursor-pointer">
+              <Link href={"#skills"}>Skills</Link>
             </li>
 
             <li className="elementsm text-white cursor-pointer">
