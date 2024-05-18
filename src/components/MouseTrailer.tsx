@@ -9,7 +9,7 @@ function MouseTrailer() {
     const trailer = trailerRef.current;
     const h1 = document.querySelectorAll("h1");
     const p = document.querySelectorAll("p");
-    const button = document.querySelectorAll("button");
+    const cvbtn = document.querySelectorAll("#cvbtn");
     // const img = document.querySelectorAll("img");
     // console.log(img);
 
@@ -52,9 +52,9 @@ function MouseTrailer() {
       p.addEventListener("mouseenter", onMouseEnter);
       p.addEventListener("mouseleave", onMouseLeave);
     });
-    button.forEach((button) => {
-      button.addEventListener("mouseenter", onMouseEnter);
-      button.addEventListener("mouseleave", onMouseLeave);
+    cvbtn.forEach((cvbtn) => {
+      cvbtn.addEventListener("mouseenter", onMouseEnter);
+      cvbtn.addEventListener("mouseleave", onMouseLeave);
     });
     // img.forEach((img) => {
     //   img.addEventListener("mouseenter", onMouseEnter);
@@ -72,9 +72,9 @@ function MouseTrailer() {
         p.removeEventListener("mouseenter", onMouseEnter);
         p.removeEventListener("mouseleave", onMouseLeave);
       });
-      button.forEach((button) => {
-        button.addEventListener("mouseenter", onMouseEnter);
-        button.addEventListener("mouseleave", onMouseLeave);
+      cvbtn.forEach((cvbtn) => {
+        cvbtn.addEventListener("mouseenter", onMouseEnter);
+        cvbtn.addEventListener("mouseleave", onMouseLeave);
       });
     };
   }, []);

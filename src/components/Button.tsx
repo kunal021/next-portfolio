@@ -1,6 +1,9 @@
 function Button() {
   return (
-    <button className="button button--pan text-xl px-5 py-3 rounded-lg border-black border-2 z-10">
+    <button
+      id="cvbtn"
+      className="button button--pan text-xl px-5 py-3 rounded-lg border-black border-2 z-10"
+    >
       <span className="rounded-lg border-black">Download CV</span>
       <style jsx>
         {`

@@ -13,7 +13,8 @@ const projectData: projectType[] = [
   {
     id: 0,
     name: "Bank Landing Page",
-    description: "A landing page that all modern banks require",
+    description:
+      "A landing page that all modern banks require. Made using HTML, CSS and JavaScript",
     githubLink: "https://github.com/kunal021/Bankist_Landing_Page",
     liveLink: "https://kunalbankistlandingpage.netlify.app/",
     image: "/projects/bankist.png",
@@ -90,7 +91,8 @@ const projectData: projectType[] = [
   {
     id: 6,
     name: "Music Academy",
-    description: "A place where music artist can sell courses",
+    description:
+      "A place where music artist can sell courses. Made Using NextJs",
     githubLink: "https://github.com/kunal021/music-academy",
     liveLink: "https://music-academy-rho.vercel.app/",
     image: "/projects/music.png",
