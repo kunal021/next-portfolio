@@ -50,7 +50,7 @@ function ProjectCard() {
       <p className="animateProjectP opacity-0 scale-50 text-white mx-10 text-center text-3xl sm:text-5xl font-extrabold">
         SOME OF MY WORKS
       </p>
-      <div className="projectSlider opacity-100 scale-100 flex flex-wrap justify-center items-start mx-10 my-20 md:m-20 w-[25rem]">
+      <div className="projectSlider opacity-100 scale-100 flex flex-wrap justify-center items-start mx-10 my-20 md:m-20 w-[20rem] md:w-[25rem]">
         <Slider />
       </div>
     </div>
