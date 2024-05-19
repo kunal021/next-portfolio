@@ -35,7 +35,7 @@ function Socials() {
       <p className="animateProjectSocial opacity-0 scale-50 text-white mx-10 text-center text-3xl sm:text-5xl font-extrabold">
         CONNECT WITH ME
       </p>
-      <div className="flex scale-50 md:scale-100 space-x-2 md:space-x-10 md:justify-center items-center">
+      <div className="flex scale-50 md:scale-100 space-x-4 md:space-x-10 md:justify-center items-center">
         <Link
           href={"https://github.com/kunal021"}
           target="_blank"
