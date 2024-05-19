@@ -42,7 +42,7 @@ function Slider() {
           className="h-52 rounded-t-md"
         ></img>
         <div>
-          <div className="text-white font-bold flex justify-between items-center p-2 text-lg md:text-xl">
+          <div className="text-white/70 font-bold flex justify-between items-center p-2 text-lg md:text-xl">
             <p># {projectData[cardIndex].id + 1}</p>
             <p>{projectData[cardIndex].name}</p>
           </div>
@@ -50,14 +50,19 @@ function Slider() {
             <Link href={projectData[cardIndex].githubLink}>GitHub</Link>
             <Link href={projectData[cardIndex].liveLink}>Live</Link>
           </div>
-          <p className="text-white px-2 py-1 test-sm md:text-md">
+          <p className="text-white px-2 py-1 h-20 test-sm md:text-md">
             {projectData[cardIndex].description}
           </p>
           <div className="text-white flex justify-start space-x-2 md:space-x-6 items-center px-2 py-1 text-xs md:text-sm">
             <p>Tech Stack</p>
             <div className="flex flex-wrap space-x-2">
               {projectData[cardIndex].technology.map((data, i) => (
-                <p key={i}>{data}</p>
+                <img
+                  src={data}
+                  alt="tech used"
+                  key={i}
+                  className="h-6 w-6"
+                ></img>
               ))}
             </div>
           </div>
