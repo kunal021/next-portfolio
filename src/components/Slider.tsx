@@ -1,86 +1,61 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import projectData from "@/data/projectData";
-import { useState } from "react";
-import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 import Link from "next/link";
+import Image from "next/image";
 
 function Slider() {
-  const [cardIndex, setCardIndex] = useState(0);
-
-  const showNext = () => {
-    setTimeout(
-      () =>
-        setCardIndex((index) => {
-          if (index === projectData.length - 1) {
-            return 0;
-          }
-          return index + 1;
-        }),
-      300
-    );
-  };
-
-  const showPrevious = () => {
-    setTimeout(
-      () =>
-        setCardIndex((index) => {
-          if (index === 0) {
-            return projectData.length - 1;
-          }
-          return index - 1;
-        }),
-      300
-    );
-  };
   return (
-    <div className="relative transition-all duration-300">
-      <div className="w-full pb-2 border-transparent rounded-md bg-gradient-to-r from-gray-500 to-slate-900">
-        <img
-          src={projectData[cardIndex].image}
-          alt={projectData[cardIndex].name}
-          className="h-52 rounded-t-md"
-        ></img>
-        <div>
-          <div className="text-white/70 font-bold flex justify-between items-center p-2 text-lg md:text-xl">
-            <p># {projectData[cardIndex].id + 1}</p>
-            <p>{projectData[cardIndex].name}</p>
-          </div>
-          <div className="text-white flex justify-start space-x-10 items-center px-2 py-1 text-xs">
-            <Link href={projectData[cardIndex].githubLink}>GitHub</Link>
-            <Link href={projectData[cardIndex].liveLink}>Live</Link>
-          </div>
-          <p className="text-white px-2 py-1 h-20 test-sm md:text-md">
-            {projectData[cardIndex].description}
-          </p>
-          <div className="text-white flex justify-start space-x-2 md:space-x-6 items-center px-2 py-1 text-xs md:text-sm">
-            <p>Tech Stack</p>
-            <div className="flex flex-wrap space-x-2">
-              {projectData[cardIndex].technology.map((data, i) => (
-                <img
-                  src={data}
-                  alt="tech used"
-                  key={i}
-                  className="h-6 w-6"
-                ></img>
+    <Carousel>
+      <CarouselContent className="w-[250px] sm:w-[300px] md:w-[400px]">
+        {projectData.map((item) => (
+          <CarouselItem
+            key={item.id}
+            className="flex flex-col items-center justify-center gap-2 bg-gray-900 py-4"
+          >
+            <div className="flex w-full justify-center items-center text-white/50 font-bold text-lg md:text-2xl">
+              <p>{item.name}</p>
+            </div>
+            <hr className="w-[70%] mb-4 text-center m-auto text-bg-slate-400 bg-slate-700 border-slate-600" />
+            <img
+              src={item.image}
+              alt={item.name}
+              className="opacity-75 hover:opacity-100 transition-opacity duration-300 px-2 md:px-10"
+            />
+            <div className="flex justify-center items-center p-2 md:px-10 gap-10 text-white w-full text-sm">
+              <Link
+                href={item.githubLink}
+                target="_blank"
+                className="underline"
+              >
+                GitHub
+              </Link>
+              <Link href={item.liveLink} target="_blank" className="underline">
+                Live
+              </Link>
+            </div>
+            <p className="text-center p-2 md:px-10 text-white w-full text-sm md:text-base">
+              {item.description}
+            </p>
+            <div className="flex justify-center items-center gap-2">
+              {item.technology.map((img, id) => (
+                <Image key={id} src={img} alt={img} height={25} width={25} />
               ))}
             </div>
-          </div>
-        </div>
-      </div>
-      <button
-        onClick={showPrevious}
-        className="z-[100] absolute left-0 md:-left-52 top-1/2 transform -translate-y-1/2 bg-black/50 md:bg-white/50 p-1 md:p-3 rounded-full"
-      >
-        <ArrowBigLeft color="white" className="scale-75 md:scale-150" />
-      </button>
-      <button
-        onClick={showNext}
-        className="z-[100] absolute right-0 md:-right-52 top-1/2 transform -translate-y-1/2 bg-black/50 md:bg-white/50 p-1 md:p-3 rounded-full "
-      >
-        <ArrowBigRight color="white" className="scale-75 md:scale-150" />
-      </button>
-    </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 }
 

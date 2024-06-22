@@ -12,9 +12,51 @@ interface projectType {
 const projectData: projectType[] = [
   {
     id: 0,
+    name: "Medium-Blog",
+    description: "Write stories & ideas, share it to the world.",
+    githubLink: "https://github.com/kunal021/medium-blog",
+    liveLink: "https://kunal-medium-blog.vercel.app/",
+    image: "/projects/medium-blog.png",
+    technology: [
+      "/skills/icons8-nextjs-96.png",
+      "/skills/icons8-typescript-96.png",
+      "/skills/icons8-tailwindcss-96.png",
+      "/skills/icons8-prisma-orm-96.png",
+    ],
+    featured: true,
+  },
+  {
+    id: 1,
+    name: "FilterMail",
+    description: "Filtet your mail with just one click",
+    githubLink: "https://github.com/kunal021/gmail",
+    liveLink: "https://gmailclassifier.vercel.app/",
+    image: "/projects/FilterMail.png",
+    technology: [
+      "/skills/icons8-nextjs-96.png",
+      "/skills/icons8-typescript-96.png",
+      "/skills/icons8-tailwindcss-96.png",
+      "/skills/icons8-prisma-orm-96.png",
+    ],
+    featured: true,
+  },
+  {
+    id: 2,
+    name: "News",
+    description: "Get the latest news on your fingertip.",
+    githubLink: "https://github.com/kunal021/news-assignment",
+    liveLink: "https://kunal-news.vercel.app/",
+    image: "/projects/news.png",
+    technology: [
+      "/skills/icons8-react-native-96.png",
+      "/skills/icons8-tailwindcss-96.png",
+    ],
+    featured: true,
+  },
+  {
+    id: 3,
     name: "Bank Landing Page",
-    description:
-      "A landing page that all modern banks require. Made using HTML, CSS and JavaScript",
+    description: "A landing page that all modern banks require.",
     githubLink: "https://github.com/kunal021/Bankist_Landing_Page",
     liveLink: "https://kunalbankistlandingpage.netlify.app/",
     image: "/projects/bankist.png",
@@ -26,9 +68,9 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 1,
+    id: 4,
     name: "Piggame",
-    description: "A two player dice game build with HTML, CSS and JavaScript",
+    description: "A two player dice game.",
     githubLink: "https://github.com/kunal021/piggame",
     liveLink: "https://kunalpiggame.netlify.app/",
     image: "/projects/piggame.png",
@@ -40,7 +82,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 2,
+    id: 5,
     name: "Far Away",
     description:
       "A power packed tool that helps you making and organizing a list of things",
@@ -51,7 +93,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 3,
+    id: 6,
     name: "goodFOOD",
     description:
       "Craving for food, want to make it, but don't know how, no worries just come to goodFOOD",
@@ -65,7 +107,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 4,
+    id: 7,
     name: "Paatym",
     description: "A clone of paytm, let you transfer money with other users",
     githubLink: "https://github.com/kunal021/paaytm-frontend",
@@ -81,7 +123,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 5,
+    id: 8,
     name: "Courses.io",
     description:
       "Gets distracted while learning from youtube, fear no more learn from courses.io without distraction",
@@ -98,7 +140,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 6,
+    id: 9,
     name: "Music Academy",
     description:
       "A place where music artist can sell courses. Made Using NextJs",

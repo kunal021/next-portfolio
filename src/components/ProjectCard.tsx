@@ -37,7 +37,7 @@ function ProjectCard() {
         scrollTrigger: {
           trigger: ".projectSlider",
           start: "top 90%",
-          end: "top 40%",
+          end: "top 20%",
           // markers: true,
           scrub: 1,
         },
