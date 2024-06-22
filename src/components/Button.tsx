@@ -10,6 +10,7 @@ function Button() {
         href={
           "https://drive.google.com/file/d/1lV1BPxV8VEsbH5AtwosevWUgLvg4qHez/view?usp=sharing"
         }
+        target="_blank"
         className="rounded-lg border-black"
       >
         Download CV
