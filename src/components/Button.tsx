@@ -1,10 +1,19 @@
+import Link from "next/link";
+
 function Button() {
   return (
     <button
       id="cvbtn"
       className="button button--pan text-xl px-5 py-3 rounded-lg border-black border-2 z-10"
     >
-      <span className="rounded-lg border-black">Download CV</span>
+      <Link
+        href={
+          "https://drive.google.com/file/d/1lV1BPxV8VEsbH5AtwosevWUgLvg4qHez/view?usp=sharing"
+        }
+        className="rounded-lg border-black"
+      >
+        Download CV
+      </Link>
       <style jsx>
         {`
           .button {
