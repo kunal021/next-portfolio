@@ -17,7 +17,7 @@ function NavBar() {
     const tl = gsap.timeline();
 
     tl.from(navRef.current, {
-      y: -100,
+      y: 100,
       duration: 1.5,
       ease: "back.inOut",
     });
@@ -81,30 +81,30 @@ function NavBar() {
   return (
     <div>
       <div className="hidden md:flex justify-center items-center">
-        <nav ref={navRef} className="bottom-0 sm:top-0 fixed z-50 h-fit">
+        <nav ref={navRef} className="bottom-0 fixed z-[100] h-fit">
           <div>
             <ul
               ref={navElement}
               onMouseMove={handleMouseMove}
-              className="nav text-md font-medium flex flex-row justify-center items-start relative space-x-6 my-5 px-5 py-3 rounded-full border-transparent bg-white/10 backdrop-blur-sm"
+              className="nav text-md flex flex-row justify-center items-start font-semibold relative space-x-6 my-5 px-5 py-3 rounded-full border border-gray-500 bg-black/5 backdrop-blur-sm"
             >
-              <li className="element text-white cursor-pointer ">
+              <li className="element text-black cursor-pointer">
                 <Link href={"#home"}>Home</Link>
               </li>
 
-              {/* <li className="element text-white cursor-pointer ">
+              <li className="element text-black cursor-pointer">
                 <Link href={"#about"}>About Me</Link>
-              </li> */}
+              </li>
 
-              <li className="element text-white cursor-pointer">
+              <li className="element text-black cursor-pointer">
                 <Link href={"#projects"}>Projects</Link>
               </li>
 
-              <li className="element text-white cursor-pointer">
+              <li className="element text-black cursor-pointer">
                 <Link href={"#skills"}>Skills</Link>
               </li>
 
-              <li className="element text-white cursor-pointer">
+              <li className="element text-black cursor-pointer">
                 <Link href={"#contact"}>Contact Me</Link>
               </li>
             </ul>
@@ -119,7 +119,7 @@ function NavBar() {
               height: 100%;
               background: radial-gradient(
                 250px circle at var(--mouse-x) var(--mouse-y),
-                rgba(255, 255, 255, 0.1),
+                rgba(0, 0, 0, 0.2),
                 transparent 40%
               );
               opacity: 0;
@@ -148,7 +148,7 @@ function NavBar() {
             viewBox="0 0 50 50"
           >
             <path
-              fill="#ffffff"
+              fill="#000000"
               d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
             ></path>
           </svg>
@@ -162,7 +162,7 @@ function NavBar() {
             viewBox="0 0 24 24"
           >
             <path
-              fill="#ffffff"
+              fill="#000000"
               d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"
             ></path>
           </svg>
@@ -174,24 +174,20 @@ function NavBar() {
           ref={navRefSm}
           className="flex flex-col fixed w-full backdrop-blur z-50"
         >
-          <ul className="text-base font-medium flex flex-col justify-start items-start relative p-10 space-y-6 bg-white/20">
-            <li className="elementsm text-white cursor-pointer ">
+          <ul className="text-base font-semibold flex flex-col justify-start items-start relative p-10 space-y-6 bg-black/10">
+            <li className="elementsm text-black cursor-pointer">
               <Link href={"#home"}>Home</Link>
             </li>
 
-            {/* <li className="elementsm text-white cursor-pointer ">
-              <Link href={"#about"}>About Me</Link>
-            </li> */}
-
-            <li className="elementsm text-white cursor-pointer">
+            <li className="elementsm text-black cursor-pointer">
               <Link href={"#projects"}>Projects</Link>
             </li>
 
-            <li className="elementsm text-white cursor-pointer">
+            <li className="elementsm text-black cursor-pointer">
               <Link href={"#skills"}>Skills</Link>
             </li>
 
-            <li className="elementsm text-white cursor-pointer">
+            <li className="elementsm text-black cursor-pointer">
               <Link href={"#contact"}>Contact Me</Link>
             </li>
           </ul>

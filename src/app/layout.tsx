@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
-import StarsCanvas from "@/components/Background";
-import MouseTrailer from "@/components/MouseTrailer";
+import Social from "@/components/Social";
+// import MouseTrailer from "@/components/MouseTrailer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MouseTrailer />
-        <StarsCanvas />
-        <NavBar />
+        {/* <MouseTrailer /> */}
+        <Social />
         {children}
       </body>
     </html>

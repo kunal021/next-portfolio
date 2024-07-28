@@ -4,57 +4,15 @@ function Button() {
   return (
     <Link
       href={
-        "https://drive.google.com/file/d/1lV1BPxV8VEsbH5AtwosevWUgLvg4qHez/view?usp=sharing"
+        "https://drive.google.com/file/d/1ot4zbnPUHNc25x1zyalw5K3Uzr_MazfF/view?usp=drive_link"
       }
       target="_blank"
     >
       <button
         id="cvbtn"
-        className="button button--pan text-xl px-5 py-3 rounded-lg border-black border-2 z-10"
+        className="rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
       >
-        <span className="rounded-lg border-black">Download CV</span>
-        <style jsx>
-          {`
-            .button {
-              cursor: pointer;
-              background: transparent;
-              border: none;
-              margin: 0;
-              font-family: inherit;
-              position: relative;
-            }
-
-            .button::before,
-            .button::after {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-            }
-
-            .button--pan {
-              font-weight: 700;
-              overflow: hidden;
-              color: #fff;
-            }
-
-            .button--pan span {
-              position: relative;
-              mix-blend-mode: difference;
-            }
-
-            .button--pan::before {
-              content: "";
-              background: #fff;
-              transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
-            }
-
-            .button--pan:hover::before {
-              transform: translate3d(0, -100%, 0);
-            }
-          `}
-        </style>
+        Resume
       </button>
     </Link>
   );

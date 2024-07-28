@@ -6,8 +6,7 @@ import { useGSAP } from "@gsap/react";
 import Button from "@/components/Button";
 import hackerEffect from "@/utils/hackerEffect";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Skills from "./Skills";
-import Socials from "./Socials";
+import { ArrowDown, Mouse, MoveDown } from "lucide-react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -23,18 +22,6 @@ function Home() {
           duration: 2.5,
           filter: "blur(15px)",
         });
-
-        tl.to(".ani", {
-          opacity: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: ".ani",
-            start: "top 125px",
-            end: "top top",
-            // markers: true,
-            scrub: 3,
-          },
-        });
       });
 
       return () => ctx.revert();
@@ -49,32 +36,30 @@ function Home() {
         hackerEffect({ target: h1Element });
       }
     }, 1800);
-    // return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div
       ref={heroRef}
-      className="flex flex-col justify-center items-center h-screen space-y-6 text-white"
+      className="flex flex-col justify-center items-center h-screen space-y-6 text"
       id="home"
     >
       <h1
         data-value="KUNAL SINGH"
         onMouseOver={hackerEffect}
-        className="ani text-[40px] leading-8  sm:text-7xl font-black"
+        className="ani text-[40px] leading-8  sm:text-7xl font-black text-center"
         id="hacker"
       >
         KUNAL SINGH
       </h1>
-      <p className="ani text-xl sm:text-3xl font-bold">
-        A passionate Full Stack Developer
+      <p className="ani text-xl sm:text-3xl font-bold underline underline-offset-8 text-center">
+        A Passionate Full Stack Developer
       </p>
-      <div className="ani">
-        <Button />
+      <Button />
+      <div className="flex flex-col items-center pt-10">
+        <Mouse className="h-10 w-10 animate-bounce" />
+        {/* <MoveDown className="h-3  animate-bounce" /> */}
       </div>
-      {/* <div className="ani scale-75 mt-5">
-        <Socials />
-      </div> */}
     </div>
   );
 }

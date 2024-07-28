@@ -83,5 +83,40 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #e2e8f0;
+  background: #9e9e9e;
+  border-radius: 20px;
+}
+
+.card::-webkit-scrollbar {
+  /* width: 5px;
+  height: 5px; */
+  width: 0px;
+}
+
+/* .card::-webkit-scrollbar-thumb {
+  background: #9e9e9e;
+  border-radius: 20px;
+} */
+
+body {
+  position: absolute;
+
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-size: 74px 74px;
+  overflow-x: hidden;
+}
+
+.card {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  /* border-bottom: 1px solid black; */
+  background-image: linear-gradient(to right, #80808012 1px, #ffffff 1px),
+    linear-gradient(to bottom, #80808012 1px, #ffffff 1px);
+  background-size: 74px 74px;
+
 }

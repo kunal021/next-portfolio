@@ -1,19 +1,23 @@
-// import AboutMe from "@/components/AboutMe";
+import Aboutme from "@/components/Aboutme";
 import Home from "@/components/Home";
-import Projects from "@/components/Projects";
+import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Socials from "@/components/Socials";
 
-function page() {
+function App() {
   return (
     <div>
-      <Home />
-      {/* <AboutMe /> */}
-      <Projects />
-      <Skills />
-      <Socials />
+      <div className="card z-50 h-screen">
+        <Home />
+      </div>
+      <div className="card z-40 h-screen">
+        <Aboutme />
+      </div>
+      <div className="sticky bottom-0 w-full z-30 h-screen">
+        <Projects />
+        <Skills />
+      </div>
     </div>
   );
 }
 
-export default page;
+export default App;

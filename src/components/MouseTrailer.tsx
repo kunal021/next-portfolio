@@ -83,7 +83,7 @@ function MouseTrailer() {
     <div
       ref={trailerRef}
       id="trailer"
-      className="h-6 w-6 opacity-0 bg-white rounded-[50%] z-[9999] fixed top-0 left-0 pointer-events-none mix-blend-difference p-[10px] flex justify-center items-center transition-opacity duration-500"
+      className="h-6 w-6 opacity-100 bg-black rounded-[50%] z-[9999] fixed top-0 left-0 pointer-events-none mix-blend-difference p-[10px] flex justify-center items-center transition-opacity duration-500"
     ></div>
   );
 }

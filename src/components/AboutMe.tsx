@@ -1,73 +1,33 @@
-"use client";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
+/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-function AboutMe() {
-  useGSAP(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
-
-      tl.to(".animateProjectA", {
-        opacity: 1,
-        scale: 1,
-        duration: 2,
-        stagger: 0.5,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: ".animateProjectA",
-          start: "top 80%",
-          end: "top 30%",
-          //   markers: true,
-          scrub: 3,
-        },
-      });
-
-      tl.from(".skillDIV", {
-        opacity: 0,
-        scale: 0,
-        duration: 2,
-        // stagger: 0.5,
-        ease: "power.inOut",
-        scrollTrigger: {
-          trigger: ".skillDIV",
-          start: "top 80%",
-          end: "top 30%",
-          scrub: 3,
-          //   markers: true,
-        },
-      });
-    });
-    return () => ctx.revert();
-  });
+function Aboutme() {
   return (
-    <div
-      className="flex flex-col justify-center items-center space-y-10 my-10 w-full h-screen bg-gray-500/20"
-      id="#about"
-    >
-      <p className="animateProjectA opacity-0 scale-50 flex justify-center items-center text-5xl font-black text-white">
-        About Me
-      </p>
-      <div className=" space-y-10 text-white/50 hover:text-white/75 transition-all duration-500 text-xl leading-10 p-10 mx-28 ">
-        <p className="skillDIV scale-100 opacity-100 text-start font-semibold">
-          Hello everyone, Kunal here. Pleasure metting you all. Please have a
-          look around.
-        </p>
-        <p className="skillDIV scale-100 opacity-100 text-start font-medium">
-          I&apos;m a college student majoring in Computer Engineering from
-          India. I&apos; passionate about tech and Software Developement. I
-          mainly work with technologies like JavaScript, ReactJs, Tailwind CSS,
-          NodeJs, ExpressJs, MongoDB and sometimes in my spare casually explores
-          some intresting UI libraries like Shadcn, Aceternity UI. Currently
-          I&apos;m learning NextJs and Postgres database with Prisma ORM and
-          basics of AWS. My skillset is not limited to this I&apos;m eager to
-          learn more and constantly upskilling myself.
-        </p>
+    <div className="flex flex-col justify-center items-center py-10" id="about">
+      <h3 className="text-3xl font-bold">About Me</h3>
+      <div className="flex flex-col md:flex-row justify-center items-start w-[85%] mt-12 lg:my-32 gap-10">
+        <img
+          src="/Kunal_animated.jpg"
+          alt="profile"
+          className="rounded-xl m-auto h-32 w-32 md:h-64 md:w-64"
+        />
+        <div className="flex flex-col justify-start lg:w-[50%] gap-10 my-auto">
+          <p className="text-lg md:text-2xl font-bold text-center sm:text-start mx-auto md:mx-0">
+            Hello everyone 👋, I am Kunal.
+          </p>
+          <p className="text-xs md:text-base font-medium text-center md:text-start">
+            I&apos;m a passionate Full Stack Developer, with a passion for
+            creating beautiful and performant web applications. I&apos;m an
+            undergraduate student from India and am currently pursuing my
+            Bachelor of Engineering in Computer Engineering from Gujarat
+            Technological University. I work with technologies like JavaScript,
+            TypeScript, ReactJS, NextJS, Tailwind CSS, NodeJS, ExpressJS,
+            MongoDB, PostgreSQL and Docker.
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
-export default AboutMe;
+export default Aboutme;
