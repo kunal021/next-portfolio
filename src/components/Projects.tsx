@@ -9,7 +9,7 @@ import Image from "next/image";
 export const Projects = () => {
   return (
     <section className="scale-75">
-      <h3 className="text-5xl font-bold text-center py-5">Projects</h3>
+      <h3 className="text-6xl font-bold text-center py-5">Projects</h3>
       {projectData.map((project) => (
         <div key={project.id} className="max-w-5xl mx-auto py-3">
           <Link
@@ -82,7 +82,7 @@ const Link = ({ heading, imgSrc, technology, href }: LinkProps) => {
             staggerChildren: 0.075,
             delayChildren: 0.25,
           }}
-          className="relative z-10 block text-lg sm:text-2xl font-bold text-black/80 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
+          className="relative z-10 block text-3xl font-bold text-black/80 transition-colors duration-500 group-hover:text-neutral-50 md:text-5xl"
         >
           {heading.split("").map((l, i) => (
             <motion.span

@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
-function Aboutme() {
+function AboutMe() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <h3 className="text-3xl font-bold">About Me</h3>
+      <h3 className="text-5xl font-bold">About Me</h3>
       <div className="flex flex-col md:flex-row justify-center items-start w-[85%] mt-12 gap-10">
         <img
           src="/Kunal_animated.jpg"
@@ -29,4 +29,4 @@ function Aboutme() {
   );
 }
 
-export default Aboutme;
+export default AboutMe;

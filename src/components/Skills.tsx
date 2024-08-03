@@ -3,12 +3,12 @@ import Image from "next/image";
 function Skills() {
   return (
     <div className="flex flex-col gap-5 pb-24 md:mx-40 justify-center items-center">
-      <h3 className="text-3xl font-bold text-center pb-5">Skills</h3>
-      <div className="flex flex-wrap gap-5 justify-center items-center">
+      <h3 className="text-5xl font-bold text-center pb-5">Skills</h3>
+      <div className="flex flex-wrap gap-5 justify-center items-center scale-75 md:scale-100">
         {data.map((skill) => (
           <div
             key={skill.id}
-            className="flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center p-1"
           >
             <Image
               src={skill.image96}
