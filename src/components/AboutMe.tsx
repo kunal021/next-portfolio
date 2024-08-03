@@ -12,7 +12,7 @@ function AboutMe() {
         />
         <div className="flex flex-col justify-start lg:w-[50%] gap-10 my-auto">
           <p className="text-lg md:text-2xl font-bold text-center sm:text-start mx-auto md:mx-0">
-            Hello everyone 👋, I am Kunal.
+            Hello everyone 👋, Kunal here.
           </p>
           <p className="text-xs md:text-base font-medium text-center md:text-start">
             I&apos;m a passionate Full Stack Developer, with a passion for

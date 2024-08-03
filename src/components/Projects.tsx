@@ -11,7 +11,7 @@ export const Projects = () => {
     <section className="scale-75">
       <h3 className="text-6xl font-bold text-center py-5">Projects</h3>
       {projectData.map((project) => (
-        <div key={project.id} className="max-w-5xl mx-auto py-3">
+        <div key={project.id} className="max-w-6xl mx-auto my-10">
           <Link
             heading={project.name}
             imgSrc={project.image}
