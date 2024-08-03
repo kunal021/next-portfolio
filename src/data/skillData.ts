@@ -79,6 +79,16 @@ const data: skillTypes[] = [
     name: "Prisma",
     image96: "/skills/icons8-prisma-orm-96.png",
   },
+  {
+    id: 13,
+    name: "Supabase",
+    image96: "/skills/icons8-supabase-96.png",
+  },
+  {
+    id: 14,
+    name: "Docker",
+    image96: "/skills/icons8-docker-96.png",
+  },
 ];
 
 export default data;

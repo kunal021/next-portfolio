@@ -8,10 +8,10 @@ import Image from "next/image";
 
 export const Projects = () => {
   return (
-    <section className="card p-4 md:p-8" id="projects">
-      <h3 className="text-3xl font-bold text-center py-5">Projects</h3>
+    <section className="scale-75">
+      <h3 className="text-5xl font-bold text-center py-5">Projects</h3>
       {projectData.map((project) => (
-        <div key={project.id} className="max-w-5xl">
+        <div key={project.id} className="max-w-5xl mx-auto py-3">
           <Link
             heading={project.name}
             imgSrc={project.image}
@@ -69,7 +69,7 @@ const Link = ({ heading, imgSrc, technology, href }: LinkProps) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
-      className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+      className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50"
     >
       <div>
         <motion.span
