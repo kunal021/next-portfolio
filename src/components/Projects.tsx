@@ -8,10 +8,10 @@ import Image from "next/image";
 
 export const Projects = () => {
   return (
-    <section className="scale-75">
-      <h3 className="text-6xl font-bold text-center py-5">Projects</h3>
+    <section className="my-20">
+      <h3 className="text-5xl font-bold text-center py-5">Projects</h3>
       {projectData.map((project) => (
-        <div key={project.id} className="max-w-6xl mx-auto my-10">
+        <div key={project.id} className="max-w-6xl mx-auto my-10 scale-75">
           <Link
             heading={project.name}
             imgSrc={project.image}
