@@ -50,7 +50,7 @@ function Social() {
               className="nav scale-75 sm:scale-100 text-md flex flex-row justify-center items-start font-semibold relative space-x-2 my-5 px-2 py-1 rounded-full border border-gray-500 bg-black/5 backdrop-blur-sm"
             >
               <Link
-                href={"https://x.com/lemonade_eez"}
+                href={"https://github.com/kunal021"}
                 target="_blank"
                 className="text-black scale-75 sm:scale-100 font-bold flex justify-center items-center sm:space-x-2 rounded-full border-transparent border-2 px-2 py-1"
               >
@@ -84,7 +84,7 @@ function Social() {
                 {/* <p>Linkedin</p> */}
               </Link>
               <Link
-                href={"https://twitter.com/kunalSi21"}
+                href={"https://x.com/lemonade_eez"}
                 target="_blank"
                 className="text-black scale-75 sm:scale-100 font-bold flex justify-center items-center sm:space-x-2 rounded-full border-transparent border-2 px-2 py-1"
               >
