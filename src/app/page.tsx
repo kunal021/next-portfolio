@@ -6,6 +6,7 @@ import Home from "@/components/Home";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
 import { useInView } from "react-intersection-observer";
+import ThemeToggle from "@/components/ThemeToggle";
 
 function App() {
   const { ref: homeRef, inView: homeInView } = useInView({ threshold: 0.1 });
@@ -20,7 +21,10 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="relative">
+      <div className="fixed top-5 right-5 z-[100]">
+        <ThemeToggle />
+      </div>
       <motion.div
         ref={homeRef}
         initial={{ opacity: 0, y: 20 }}
@@ -40,13 +44,13 @@ function App() {
       </motion.div>
 
       <motion.div
-        ref={projectsRef}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{
-          opacity: projectsInView ? 1 : 0,
-          y: projectsInView ? 0 : 20,
-        }}
-        transition={{ duration: 0.5 }}
+      // ref={projectsRef}
+      // initial={{ opacity: 0, y: 20 }}
+      // animate={{
+      //   opacity: projectsInView ? 1 : 0,
+      //   y: projectsInView ? 0 : 20,
+      // }}
+      // transition={{ duration: 0.5 }}
       >
         <Projects />
       </motion.div>

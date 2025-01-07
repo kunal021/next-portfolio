@@ -107,6 +107,9 @@ function NavBar() {
               <li className="element text-black cursor-pointer">
                 <Link href={"#contact"}>Contact Me</Link>
               </li>
+              <li className="element text-black cursor-pointer">
+                <Link href={"#contact"}>Contact Me</Link>
+              </li>
             </ul>
           </div>
           <style jsx>{`

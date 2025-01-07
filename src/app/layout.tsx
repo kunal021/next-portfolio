@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Social from "@/components/Social";
+import { ThemeProvider } from "@/context/ThemeProvider";
 // import MouseTrailer from "@/components/MouseTrailer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,9 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <MouseTrailer /> */}
-        <Social />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* <MouseTrailer /> */}
+          <Social />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

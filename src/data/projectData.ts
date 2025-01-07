@@ -11,7 +11,41 @@ interface projectType {
 
 const projectData: projectType[] = [
   {
-    id: 9,
+    id: 8,
+    name: "DevConnect",
+    description:
+      "A social platform enabling users to connect, share posts, and engage in real-time chat, fostering seamless interaction and communication",
+    githubLink: "https://github.com/kunal021/devconnect",
+    liveLink: "https://devconnectt.pages.dev/",
+    image: "/projects/devconnect.png",
+    technology: [
+      "/skills/icons8-typescript-96.png",
+      "/skills/icons8-react-native-96.png",
+      "/skills/icons8-tailwindcss-96.png",
+      "/skills/icons8-node-js-96.png",
+      "/skills/icons8-express-js-96.png",
+      "/skills/icons8-mongodb-96.png",
+    ],
+    featured: true,
+  },
+  {
+    id: 7,
+    name: "DevFlow",
+    description:
+      "A QA platform inspired by Stack Overflow, enabling users to post questions, provide answers, and engage in discussions",
+    githubLink: "https://github.com/kunal021/devflow",
+    liveLink: "https://devflow-flow.vercel.app/",
+    image: "/projects/devflow.png",
+    technology: [
+      "/skills/icons8-typescript-96.png",
+      "/skills/icons8-nextjs-96.png",
+      "/skills/icons8-tailwindcss-96.png",
+      "/skills/icons8-mongodb-96.png",
+    ],
+    featured: true,
+  },
+  {
+    id: 6,
     name: "Trimr",
     description: "The only URL Shortener you’ll ever need.",
     githubLink: "https://github.com/kunal021/trimr",
@@ -25,25 +59,25 @@ const projectData: projectType[] = [
     ],
     featured: true,
   },
+  // {
+  //   id: 5,
+  //   name: "Tickter",
+  //   description: "Your one stop for all your event management needs.",
+  //   githubLink: "https://github.com/kunal021/tickter",
+  //   liveLink: "https://tickter.netlify.app/",
+  //   image: "/projects/tickter.png",
+  //   technology: [
+  //     "/skills/icons8-react-native-96.png",
+  //     "/skills/icons8-javascript-96.png",
+  //     "/skills/icons8-tailwindcss-96.png",
+  //     "/skills/icons8-express-js-96.png",
+  //     "/skills/icons8-supabase-96.png",
+  //     "/skills/icons8-mongodb-96.png",
+  //   ],
+  //   featured: true,
+  // },
   {
-    id: 8,
-    name: "Tickter",
-    description: "Your one stop for all your event management needs.",
-    githubLink: "https://github.com/kunal021/tickter",
-    liveLink: "https://tickter.netlify.app/",
-    image: "/projects/tickter.png",
-    technology: [
-      "/skills/icons8-react-native-96.png",
-      "/skills/icons8-javascript-96.png",
-      "/skills/icons8-tailwindcss-96.png",
-      "/skills/icons8-express-js-96.png",
-      "/skills/icons8-supabase-96.png",
-      "/skills/icons8-mongodb-96.png",
-    ],
-    featured: true,
-  },
-  {
-    id: 7,
+    id: 4,
     name: "Medium-Blog",
     description: "Write stories & ideas, share it to the world.",
     githubLink: "https://github.com/kunal021/medium-blog",
@@ -59,22 +93,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 6,
-    name: "FilterMail",
-    description: "Filtet your mail with just one click",
-    githubLink: "https://github.com/kunal021/gmail",
-    liveLink: "https://gmailclassifier.vercel.app/",
-    image: "/projects/FilterMail.png",
-    technology: [
-      "/skills/icons8-nextjs-96.png",
-      "/skills/icons8-typescript-96.png",
-      "/skills/icons8-tailwindcss-96.png",
-      "/skills/icons8-prisma-orm-96.png",
-    ],
-    featured: true,
-  },
-  {
-    id: 5,
+    id: 3,
     name: "Music Academy",
     description:
       "A place where music artist can sell courses. Made Using NextJs",
@@ -89,20 +108,7 @@ const projectData: projectType[] = [
     featured: true,
   },
   {
-    id: 4,
-    name: "News",
-    description: "Get the latest news on your fingertip.",
-    githubLink: "https://github.com/kunal021/news-assignment",
-    liveLink: "https://kunal-news.vercel.app/",
-    image: "/projects/news.png",
-    technology: [
-      "/skills/icons8-react-native-96.png",
-      "/skills/icons8-tailwindcss-96.png",
-    ],
-    featured: true,
-  },
-  {
-    id: 3,
+    id: 2,
     name: "Far Away",
     description:
       "A power packed tool that helps you making and organizing a list of things",
@@ -110,20 +116,6 @@ const projectData: projectType[] = [
     liveLink: "https://kunalfaraway.netlify.app/",
     image: "/projects/faraway.png",
     technology: ["/skills/icons8-react-native-96.png"],
-    featured: true,
-  },
-  {
-    id: 2,
-    name: "goodFOOD",
-    description:
-      "Craving for food, want to make it, but don't know how, no worries just come to goodFOOD",
-    githubLink: "https://github.com/kunal021/goodFood",
-    liveLink: "https://kunal-goodfood.netlify.app/",
-    image: "/projects/goodfood.png",
-    technology: [
-      "/skills/icons8-react-native-96.png",
-      "/skills/icons8-tailwindcss-96.png",
-    ],
     featured: true,
   },
   {
